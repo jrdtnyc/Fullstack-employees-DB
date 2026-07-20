@@ -10,14 +10,17 @@
     "test:server": "vitest server",
     "db:schema": "psql -d fullstack_employees -f ./db/schema.sql",
     "db:seed": "node --env-file=.env db/seed.js",
-    "db:reset": "npm run db:schema && npm run db:seed"
+    "db:reset": "npm run db:schema && npm run db:seed",
+    "start:dev": "nodemon index.js",
+    "start:dev:sync": "SYNCDB=true nodemon index.js"
   },
   "imports": {
     "#*": "./*.js"
   },
   "dependencies": {
-    "express": "^5.1.0",
-    "pg": "^8.14.1"
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14",
+    "pg": "^8.22.0"
   },
   "devDependencies": {
     "supertest": "^7.1.0",

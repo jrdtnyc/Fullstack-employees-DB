@@ -1,5 +1,4 @@
 import express from "express";
-const router = express.Router();
-export default router;
+export const employeesrouter = express.Router();
 
 // TODO: this file!
