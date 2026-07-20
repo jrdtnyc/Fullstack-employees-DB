@@ -15,7 +15,10 @@ async function seedEmployees() {
            INSERT INTO employees(name, birthday, salary) VALUES ('Ethan Miller', '1999-08-13', 3000 )
   
   `;
+  console.log("🌱 Database seeded.");
 }
+
+export default client;
 
 await db.connect();
 await seedEmployees();
