@@ -1,5 +1,3 @@
 import pg from "pg";
-const db = new pg.Client(
-  process.env.DATABASE_URL || "postgres://localhost/fullstack_employees",
-);
-export default client;
+const db = new pg.Client(process.env.DATABASE_URL);
+export default db;
